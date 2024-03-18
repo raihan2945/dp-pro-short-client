@@ -1,0 +1,72 @@
+#eduction-secion{
+    background-color: white;
+    padding: 5rem;
+    margin-top: 5rem;
+}
+
+#eduction h1{
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#eduction .education-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+#eduction .institute{
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+
+/* ----------Training----------- */
+#training{
+    margin-top: 3rem;
+}
+
+#training h1{
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#training .training-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+#training .institute{
+    font-size: .8rem;
+    font-weight: 400;
+    color: #5C5F66;
+}
+/* ----------Training----------- */
+#research-paper{
+    margin-top: 3rem;
+}
+
+#research-paper h1{
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#research-paper .JournalName{
+    font-size: 1rem;
+    font-weight: 600;
+}
+#research-paper .institute{
+    font-size: .8rem;
+    font-weight: 400;
+    color: #5C5F66;
+}
+
+
+@media (max-width: 991px) {
+    
+    #eduction-secion{
+        background-color: white;
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+  }

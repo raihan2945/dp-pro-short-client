@@ -1,0 +1,37 @@
+#chamber-section{
+    background-color: white;
+    padding: 5rem;
+    margin-top: 5rem;
+}
+
+#chamber h1{
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#experience .designation{
+    font-size: 1rem;
+    font-weight: 600;
+}
+#experience .institute{
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+
+@media (max-width: 991px) {
+    
+    #chamber-section{
+        background-color: white;
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+    .icon_section{
+        flex-direction: column;
+    }
+    .chamber_phone_numbers{
+        flex-direction: column;
+        gap: 0rem !important;
+    }
+  }

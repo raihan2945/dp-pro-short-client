@@ -1,0 +1,32 @@
+#s-speciality-secion{
+    background-color: white;
+    padding: 5rem;
+    margin-top: 5rem;
+}
+
+#speciality h1{
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#speciality .s-speciality-container{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+#speciality .s-item{
+    border: 1px solid #F0F0F2;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: .9rem;
+}
+
+@media (max-width: 991px) {
+    
+    #s-speciality-secion{
+        background-color: white;
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+  }

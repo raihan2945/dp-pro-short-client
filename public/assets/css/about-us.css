@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+# About Video
+--------------------------------------------------------------*/
+.about-doctor{
+    margin-top: 5rem;
+    background-color: white;
+    padding: 5rem;
+}
+.about-video .content {
+    font-size: 15px;
+  }
+  
+  .about-video .content h3 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #124265;
+  }
+
+  .about-text p{
+    font-size: 1rem;
+    line-height: 2rem;
+    color: #2E2F33;
+  }
+
+  @media (max-width: 991px) {
+    .about-doctor{
+      margin-top: 2rem;
+      background-color: white;
+      padding: 2rem;
+  }
+
+  .about-img{
+    display: none !important;
+  }
+  }

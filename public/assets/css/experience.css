@@ -1,0 +1,30 @@
+#experience-secion{
+    background-color: white;
+    padding: 5rem;
+    margin-top: 5rem;
+}
+
+#experience h1{
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#experience .designation{
+    font-size: 1rem;
+    font-weight: 600;
+}
+#experience .institute{
+    font-size:0.8rem;
+    font-weight: 400;
+}
+
+
+@media (max-width: 991px) {
+    
+    #experience-secion{
+        background-color: white;
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+  }

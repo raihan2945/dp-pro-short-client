@@ -20,7 +20,8 @@ const DoctorProfile = () => {
   const [height, setHeight] = useState(0);
 
   // const baseUrl = `http://localhost:5000`;
-  const baseUrl = `http://152.42.185.153:5000`;
+  const baseUrl = `https://pro.digipathy.com`;
+  // const baseUrl = `http://152.42.185.153:5000`;
 
   const getAllData = async (slugName) => {
     setLoading(true);

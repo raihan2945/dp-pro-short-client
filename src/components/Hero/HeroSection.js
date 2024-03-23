@@ -335,7 +335,7 @@ const HeroSection = ({ data }) => {
               src={
                 data?.ProfileImage
                   ? `/doctors_photo/${data?.ProfileImage}`
-                  : data?.Gender === "Female"
+                  : data?.Gender == "Female"
                   ? "/images/doctor_fe.png"
                   : "/images/doctor.png"
               }
@@ -343,7 +343,7 @@ const HeroSection = ({ data }) => {
 
               className="img-fluid"
               alt=""
-              style={{ width: "100%", objectFit: "contain" }}
+              style={{ width: "100%", maxHeight:"80vh", overflow:"hidden", objectFit: "contain" }}
             />
           </div>
         </div>

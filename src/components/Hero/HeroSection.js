@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Modal from "../UI/Modal";
-import 'bootstrap/dist/css/bootstrap.css'
+import "bootstrap/dist/css/bootstrap.css";
 
 const HeroSection = ({ data }) => {
   const [modalShow, setModalShow] = useState(false);
@@ -14,12 +14,15 @@ const HeroSection = ({ data }) => {
   // console.log("data is : ", data)
 
   // const URL = "https://drmoslehuddin.com" || `${origin}`;
-  const URL = origin
+  const URL = origin;
 
   return (
     <>
       <div className="container">
-        <div className="row" style={{alignContent:"center", justifyItems:'center'}}>
+        <div
+          className="row"
+          style={{ alignContent: "center", justifyItems: "center" }}
+        >
           <div
             className="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
             data-aos="fade-up"
@@ -119,7 +122,13 @@ const HeroSection = ({ data }) => {
                         }}
                       ></i>
                       } */}
-                      <p style={{ margin: "0rem", width: "max-content", textTransform:"uppercase" }}>
+                      <p
+                        style={{
+                          margin: "0rem",
+                          width: "max-content",
+                          textTransform: "uppercase",
+                        }}
+                      >
                         {s}{" "}
                       </p>
                       {index ==
@@ -323,11 +332,18 @@ const HeroSection = ({ data }) => {
             data-aos-delay={200}
           >
             <img
-              src={data?.ProfileImage ? `/doctors_photo/${data?.ProfileImage}` : "/images/doctor.png"}
+              src={
+                data?.ProfileImage
+                  ? `/doctors_photo/${data?.ProfileImage}`
+                  : data?.Gender === "Female"
+                  ? "/images/doctor_fe.png"
+                  : "/images/doctor.png"
+              }
               // src="/images/doctor.png"
+
               className="img-fluid"
               alt=""
-              style={{width:"100%", objectFit:"contain"}}
+              style={{ width: "100%", objectFit: "contain" }}
             />
           </div>
         </div>

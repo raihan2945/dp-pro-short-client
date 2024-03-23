@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <title>Digipahty Pro</title>
+      <title>Digipathy Pro</title>
 
       <head>
         <link

@@ -291,7 +291,7 @@ const HeroSection = ({ data }) => {
               </button>
             </div>
 
-            <div style={{ marginTop: "3rem" }} className="media_links">
+            {/* <div style={{ marginTop: "3rem" }} className="media_links">
               {Array.isArray(data?.MediaLinks) &&
                 data?.MediaLinks?.length > 0 &&
                 data?.MediaLinks?.map((item, index) => {
@@ -315,7 +315,7 @@ const HeroSection = ({ data }) => {
                     </div>
                   );
                 })}
-            </div>
+            </div> */}
           </div>
           <div
             className="col-lg-6 order-1 order-lg-2 hero-img"
@@ -323,11 +323,11 @@ const HeroSection = ({ data }) => {
             data-aos-delay={200}
           >
             <img
-              // src={`${URL}/${data?.ProfileImage}`}
-              src="/images/doctor.png"
+              src={data?.ProfileImage ? `/doctors_photo/${data?.ProfileImage}` : "/images/doctor.png"}
+              // src="/images/doctor.png"
               className="img-fluid"
               alt=""
-              style={{height:"90%"}}
+              style={{width:"100%", objectFit:"contain"}}
             />
           </div>
         </div>

@@ -9,7 +9,6 @@ const Layout = ({ children }) => {
       <Head>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta charset="UTF-8" />
-        {/* <title>{allData?.Name}</title> */}
         <meta name="description" content="[DP_DOCTOR_DESCRIPTION]" />
         <meta name="keywords" content="[DP_DOCTOR_KEYWORDS]" />
         <meta name="author" content="Digipathy" />

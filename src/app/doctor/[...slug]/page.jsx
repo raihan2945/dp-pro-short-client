@@ -6,8 +6,6 @@ import Head from "next/head";
 import HeroSection from "../../../components/Hero/HeroSection";
 import axios from "axios";
 
-
-
 const DoctorProfile = () => {
   const params = useParams();
 
@@ -61,6 +59,9 @@ const DoctorProfile = () => {
 
   return (
     <>
+      <Head>
+        <title>{allData?.Name}</title>
+      </Head>
       <div style={{ backgroundColor: "#F7F8FA" }}>
         {loading ? (
           <div
@@ -87,33 +88,7 @@ const DoctorProfile = () => {
         )}
       </div>
 
-      {/* <a
-          href="#"
-          class="back-to-top d-flex align-items-center justify-content-center"
-        >
-          <i class="fas fa-arrow-up"></i>
-        </a> */}
-      {/* 👇️ scroll to top on button click */}
-      <button
-        onClick={() => {
-          window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-        }}
-        style={{
-          visibility: isVisible ? "visible" : "hidden",
-          position: "fixed",
-          padding: ".3rem .7rem",
-          fontSize: "22px",
-          bottom: "40px",
-          right: "40px",
-          backgroundColor: "#0032B7",
-          color: "#fff",
-          textAlign: "center",
-          border: "none",
-          transition: "1s all",
-        }}
-      >
-        <i class="fas fa-arrow-circle-up"></i>
-      </button>
+
       {/* ---------------------------------------- */}
       {/* Modal */}
       <div

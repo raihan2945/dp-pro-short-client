@@ -21,7 +21,11 @@ const ModalUI = (props) => {
           props?.data?.Chambers?.length > 0 &&
           props?.data?.Chambers?.map((item, index) => {
             return (
-              <div key={index} class="col-lg-12" style={{ marginBottom: "1rem" }}>
+              <div
+                key={index}
+                class="col-lg-12"
+                style={{ marginBottom: "1rem" }}
+              >
                 <div
                   style={{
                     borderRadius: "5px",
@@ -94,36 +98,40 @@ const ModalUI = (props) => {
                           {item?.Address}
                         </p>
                       </div>
-                      <div>
-                        <span style={{ color: "#A3A3AA", fontSize: ".8rem" }}>
-                          Available days :
-                        </span>{" "}
-                        {item?.AvailableDays?.map((day, index) => {
-                          return (
-                            <span key={index} style={{ fontSize: ".8rem" }}>
-                              {index == 0 ? "" : ", "}
-                              {day}
-                            </span>
-                          );
-                        })}
-                      </div>
-                      <div>
-                        <span style={{ color: "#A3A3AA", fontSize: ".8rem" }}>
-                          Available time :
-                        </span>{" "}
-                        <span style={{ fontSize: ".8rem" }}>
-                          {moment(`${item?.AvailableTime?.split("-")[0]}}`, [
-                            "HH:mm",
-                          ]).format("hh:mm a")}
-                        </span>
-                        -
-                        <span style={{ fontSize: ".8rem" }}>
-                          {moment(`${item?.AvailableTime?.split("-")[1]}}`, [
-                            "HH:mm",
-                          ]).format("hh:mm a")}
-                          {/* {item.AvailableTime.split("-")[1]} */}
-                        </span>
-                      </div>
+                      {item?.AvailableDays && (
+                        <div>
+                          <span style={{ color: "#A3A3AA", fontSize: ".8rem" }}>
+                            Available days :
+                          </span>{" "}
+                          {item?.AvailableDays?.map((day, index) => {
+                            return (
+                              <span key={index} style={{ fontSize: ".8rem" }}>
+                                {index == 0 ? "" : ", "}
+                                {day}
+                              </span>
+                            );
+                          })}
+                        </div>
+                      )}
+                      {item?.AvailableTime && (
+                        <div>
+                          <span style={{ color: "#A3A3AA", fontSize: ".8rem" }}>
+                            Available time :
+                          </span>{" "}
+                          <span style={{ fontSize: ".8rem" }}>
+                            {moment(`${item?.AvailableTime?.split("-")[0]}}`, [
+                              "HH:mm",
+                            ]).format("hh:mm a")}
+                          </span>
+                          -
+                          <span style={{ fontSize: ".8rem" }}>
+                            {moment(`${item?.AvailableTime?.split("-")[1]}}`, [
+                              "HH:mm",
+                            ]).format("hh:mm a")}
+                            {/* {item.AvailableTime.split("-")[1]} */}
+                          </span>
+                        </div>
+                      )}
                       <div
                         className="chamber_phone_numbers"
                         style={{

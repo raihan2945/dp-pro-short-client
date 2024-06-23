@@ -209,56 +209,62 @@ const HeroSection = ({ data }) => {
                 </div>
               </a>
             </div>
-            <div style={{ marginTop: "0rem" }}>
-              <a
-                style={{ textDecoration: "none" }}
-                href={`mailto:${data?.Email}`}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    gap: ".5rem",
-                    marginTop: ".8rem",
-                    alignItems: "center",
-                  }}
+            
+            {data?.Email && (
+              <div style={{ marginTop: "0rem" }}>
+                <a
+                  style={{ textDecoration: "none" }}
+                  href={`mailto:${data?.Email}`}
                 >
                   <div
                     style={{
-                      backgroundColor: "#F7F7F7",
-                      padding: ".5rem",
-                      borderRadius: "5px",
-                      height: "35px",
-                      width: "35px",
                       display: "flex",
+                      gap: ".5rem",
+                      marginTop: ".8rem",
                       alignItems: "center",
-                      justifyContent: "center",
                     }}
                   >
-                    <i style={{ color: "#0032B7" }} class="fas fa-envelope"></i>
-                  </div>
-                  <div style={{}}>
-                    <p
+                    <div
                       style={{
-                        marginBottom: "-5px",
-                        fontSize: ".8rem",
-                        color: "#919399",
+                        backgroundColor: "#F7F7F7",
+                        padding: ".5rem",
+                        borderRadius: "5px",
+                        height: "35px",
+                        width: "35px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
                       }}
                     >
-                      Email
-                    </p>
-                    <p
-                      style={{
-                        margin: "0",
-                        fontSize: "1rem",
-                        color: "#0032B7",
-                      }}
-                    >
-                      {data?.Email}
-                    </p>
+                      <i
+                        style={{ color: "#0032B7" }}
+                        class="fas fa-envelope"
+                      ></i>
+                    </div>
+                    <div style={{}}>
+                      <p
+                        style={{
+                          marginBottom: "-5px",
+                          fontSize: ".8rem",
+                          color: "#919399",
+                        }}
+                      >
+                        Email
+                      </p>
+                      <p
+                        style={{
+                          margin: "0",
+                          fontSize: "1rem",
+                          color: "#0032B7",
+                        }}
+                      >
+                        {data?.Email}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </div>
+                </a>
+              </div>
+            )}
 
             <div className="chamber">
               <p>Chamber</p>
@@ -343,7 +349,12 @@ const HeroSection = ({ data }) => {
 
               className="img-fluid"
               alt=""
-              style={{ width: "100%", maxHeight:"80vh", overflow:"hidden", objectFit: "contain" }}
+              style={{
+                width: "100%",
+                maxHeight: "80vh",
+                overflow: "hidden",
+                objectFit: "contain",
+              }}
             />
           </div>
         </div>

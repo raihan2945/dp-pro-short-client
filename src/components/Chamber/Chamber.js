@@ -1,10 +1,12 @@
 import React from "react";
 import moment from "moment/moment";
 
-import 'bootstrap/dist/css/bootstrap.css'
+import "bootstrap/dist/css/bootstrap.css";
 
 const Chamber = ({ data }) => {
   // const number = moment("14.00", ["HH:mm"]).format("hh:mm a");
+
+  console.log("data is : ", data);
 
   return (
     <div className="container">
@@ -16,7 +18,11 @@ const Chamber = ({ data }) => {
               data?.Chambers?.length > 0 &&
               data?.Chambers?.map((item, index) => {
                 return (
-                  <div key={index} class="col-lg-6" style={{ marginBottom: "1rem" }}>
+                  <div
+                    key={index}
+                    class="col-lg-6"
+                    style={{ marginBottom: "1rem" }}
+                  >
                     <div
                       style={{
                         borderRadius: "5px",
@@ -70,59 +76,73 @@ const Chamber = ({ data }) => {
                         </div>
                         <div>
                           <h6 className="designation">{item.Name}</h6>
-                          <div
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              gap: ".5rem",
-                              padding: ".5rem 0rem",
-                            }}
-                          >
-                            <i
-                              style={{ color: "#919399" }}
-                              class="fas fa-map-marker-alt"
-                            ></i>
-                            <p
-                              className="address"
-                              style={{ fontSize: ".8rem", margin: "0" }}
+                          {item?.Address && (
+                            <div
+                              style={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: ".5rem",
+                                padding: ".5rem 0rem",
+                              }}
                             >
-                              {item.Address}
-                            </p>
-                          </div>
-                          <div>
-                            <span
-                              style={{ color: "#A3A3AA", fontSize: ".8rem" }}
-                            >
-                              Available days :
-                            </span>{" "}
-                            {item?.AvailableDays?.map((day, index) => {
-                              return (
-                                <span key={index} style={{ fontSize: ".8rem" }}>
-                                  {index == 0 ? "" : ", "}
-                                  {day}
-                                </span>
-                              );
-                            })}
-                          </div>
-                          <div>
-                            <span
-                              style={{ color: "#A3A3AA", fontSize: ".8rem" }}
-                            >
-                              Available time :
-                            </span>{" "}
-                            <span style={{ fontSize: ".8rem" }}>
-                              {moment(`${item.AvailableTime.split("-")[0]}}`, [
-                                "HH:mm",
-                              ]).format("hh:mm a")}
-                            </span>
-                            -
-                            <span style={{ fontSize: ".8rem" }}>
-                              {moment(`${item.AvailableTime.split("-")[1]}}`, [
-                                "HH:mm",
-                              ]).format("hh:mm a")}
-                              {/* {item.AvailableTime.split("-")[1]} */}
-                            </span>
-                          </div>
+                              <i
+                                style={{ color: "#919399" }}
+                                class="fas fa-map-marker-alt"
+                              ></i>
+                              <p
+                                className="address"
+                                style={{ fontSize: ".8rem", margin: "0" }}
+                              >
+                                {item.Address}
+                              </p>
+                            </div>
+                          )}
+
+                          {item?.AvailableDays && (
+                            <div>
+                              <span
+                                style={{ color: "#A3A3AA", fontSize: ".8rem" }}
+                              >
+                                Available days :
+                              </span>{" "}
+                              {item?.AvailableDays?.map((day, index) => {
+                                return (
+                                  <span
+                                    key={index}
+                                    style={{ fontSize: ".8rem" }}
+                                  >
+                                    {index == 0 ? "" : ", "}
+                                    {day}
+                                  </span>
+                                );
+                              })}
+                            </div>
+                          )}
+
+                          {item?.AvailableTime && (
+                            <div>
+                              <span
+                                style={{ color: "#A3A3AA", fontSize: ".8rem" }}
+                              >
+                                Available time :
+                              </span>{" "}
+                              <span style={{ fontSize: ".8rem" }}>
+                                {moment(
+                                  `${item.AvailableTime.split("-")[0]}}`,
+                                  ["HH:mm"]
+                                ).format("hh:mm a")}
+                              </span>
+                              -
+                              <span style={{ fontSize: ".8rem" }}>
+                                {moment(
+                                  `${item.AvailableTime.split("-")[1]}}`,
+                                  ["HH:mm"]
+                                ).format("hh:mm a")}
+                                {/* {item.AvailableTime.split("-")[1]} */}
+                              </span>
+                            </div>
+                          )}
+
                           <div
                             className="chamber_phone_numbers"
                             style={{
